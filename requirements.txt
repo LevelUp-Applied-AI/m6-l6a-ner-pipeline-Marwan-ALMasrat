@@ -3,3 +3,7 @@ transformers>=4.30
 pandas
 numpy
 pytest
+matplotlib
+seaborn
+torch
+scikit-learn
