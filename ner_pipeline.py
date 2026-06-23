@@ -144,11 +144,9 @@ def compare_ner_outputs(spacy_df, hf_df):
     spacy_counts = spacy_df["entity_label"].value_counts().to_dict()
     hf_counts    = hf_df["entity_label"].value_counts().to_dict()
 
-    # lowercase للمقارنة
     spacy_lower = set(zip(spacy_df["text_id"], spacy_df["entity_text"].str.lower()))
     hf_lower    = set(zip(hf_df["text_id"],    hf_df["entity_text"].str.lower()))
 
-    # النص الأصلي للنتائج
     spacy_pairs = set(zip(spacy_df["text_id"], spacy_df["entity_text"]))
     hf_pairs    = set(zip(hf_df["text_id"],    hf_df["entity_text"]))
 
